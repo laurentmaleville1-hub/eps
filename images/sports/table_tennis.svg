@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- Manga style table tennis player -->
+  <defs>
+    <linearGradient id="skin7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdab9"/>
+      <stop offset="100%" style="stop-color:#f4a460"/>
+    </linearGradient>
+    <linearGradient id="hair7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="jersey7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196f3"/>
+      <stop offset="100%" style="stop-color:#1976d2"/>
+    </linearGradient>
+    <linearGradient id="shadow7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0.2)"/>
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4)"/>
+    </linearGradient>
+    <linearGradient id="paddle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c62828"/>
+      <stop offset="100%" style="stop-color:#b71c1c"/>
+    </linearGradient>
+    <linearGradient id="table" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5d4037"/>
+      <stop offset="100%" style="stop-color:#4e342e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Table -->
+  <rect x="50" y="280" width="200" height="15" rx="3" fill="url(#table)" stroke="#000" stroke-width="2"/>
+  <rect x="40" y="285" width="10" height="20" fill="#333" stroke="#000" stroke-width="1"/>
+  <rect x="250" y="285" width="10" height="20" fill="#333" stroke="#000" stroke-width="1"/>
+  <line x1="50" y1="295" x2="250" y2="295" stroke="#fff" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="150" y1="280" x2="150" y2="295" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Shadow -->
+  <ellipse cx="150" cy="380" rx="80" ry="20" fill="url(#shadow7)" opacity="0.5"/>
+  
+  <!-- Ready pose -->
+  <!-- Legs -->
+  <path d="M120 260 L110 340 L130 340 Z" fill="url(#jersey7)" stroke="#000" stroke-width="2"/>
+  <path d="M160 260 L150 340 L170 340 Z" fill="url(#jersey7)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Body -->
+  <path d="M130 180 L170 200 L180 260 L120 260 Z" fill="url(#jersey7)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Arms (holding paddle) -->
+  <path d="M130 180 L90 200 L100 200 L130 180 Z" fill="url(#skin7)" stroke="#000" stroke-width="2"/>
+  <path d="M170 200 L210 180 L200 180 L170 200 Z" fill="url(#skin7)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Head -->
+  <circle cx="150" cy="140" r="28" fill="url(#skin7)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Hair (short) -->
+  <path d="M130 110 L140 100 L150 105 L160 100 L170 110 L165 120 L155 125 L145 120 Z" fill="url(#hair7)" stroke="#000" stroke-width="1"/>
+  
+  <!-- Eyes (manga style - focused) -->
+  <ellipse cx="140" cy="135" rx="10" ry="8" fill="#000" stroke="#000" stroke-width="2"/>
+  <ellipse cx="160" cy="135" rx="10" ry="8" fill="#000" stroke="#000" stroke-width="2"/>
+  <circle cx="142" cy="132" r="4" fill="#fff"/>
+  <circle cx="162" cy="132" r="4" fill="#fff"/>
+  
+  <!-- Mouth (determined) -->
+  <path d="M145 150 Q150 155 155 150" fill="none" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Eyebrows -->
+  <path d="M135 125 L145 120" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  <path d="M155 120 L165 125" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Table Tennis Paddle -->
+  <path d="M220 180 L260 180 L260 220 L220 220 Z" fill="url(#paddle)" stroke="#000" stroke-width="2"/>
+  <circle cx="240" cy="200" r="15" fill="none" stroke="#000" stroke-width="2"/>
+  <path d="M230 190 L250 210" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M230 210 L250 190" fill="none" stroke="#000" stroke-width="1"/>
+  
+  <!-- Ball -->
+  <circle cx="280" cy="160" r="10" fill="#ffeb3b" stroke="#000" stroke-width="1"/>
+  <circle cx="280" cy="160" r="8" fill="#fbc02d" stroke="#000" stroke-width="0.5"/>
+  
+  <!-- Jersey details -->
+  <path d="M140 190 L160 190" fill="none" stroke="#fff" stroke-width="3"/>
+  <path d="M140 210 L160 210" fill="none" stroke="#fff" stroke-width="3"/>
+  <path d="M140 230 L160 230" fill="none" stroke="#fff" stroke-width="3"/>
+  
+  <!-- Shorts -->
+  <path d="M110 260 L170 260 L170 280 L110 280 Z" fill="#fff" stroke="#000" stroke-width="2"/>
+  
+  <!-- Shoes -->
+  <ellipse cx="120" cy="340" rx="18" ry="8" fill="#333" stroke="#000" stroke-width="1"/>
+  <ellipse cx="160" cy="340" rx="18" ry="8" fill="#333" stroke="#000" stroke-width="1"/>
+  
+  <!-- Action lines (focus effect) -->
+  <path d="M200 160 L240 140" fill="none" stroke="#fff" stroke-width="3" opacity="0.8" stroke-linecap="round"/>
+  <path d="M210 170 L250 150" fill="none" stroke="#fff" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M280 140 L300 120" fill="none" stroke="#000" stroke-width="1" opacity="0.6" stroke-linecap="round"/>
+</svg>

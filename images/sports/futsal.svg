@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- Manga style futsal player -->
+  <defs>
+    <linearGradient id="skin4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdab9"/>
+      <stop offset="100%" style="stop-color:#f4a460"/>
+    </linearGradient>
+    <linearGradient id="hair4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="jersey4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9800"/>
+      <stop offset="100%" style="stop-color:#f57c00"/>
+    </linearGradient>
+    <linearGradient id="shadow4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0.2)"/>
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4)"/>
+    </linearGradient>
+    <pattern id="ballPattern" patternUnits="userSpaceOnUse" width="20" height="20">
+      <circle cx="10" cy="10" r="8" fill="#000"/>
+      <circle cx="10" cy="10" r="6" fill="#fff"/>
+    </pattern>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="150" cy="380" rx="80" ry="20" fill="url(#shadow4)" opacity="0.5"/>
+  
+  <!-- Dribbling pose -->
+  <!-- Legs -->
+  <path d="M120 280 L110 350 L130 350 Z" fill="url(#jersey4)" stroke="#000" stroke-width="2"/>
+  <path d="M160 260 L150 350 L170 350 Z" fill="url(#jersey4)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Body -->
+  <path d="M130 180 L170 200 L180 260 L120 280 Z" fill="url(#jersey4)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Arms -->
+  <path d="M130 180 L90 200 L100 200 L130 180 Z" fill="url(#skin4)" stroke="#000" stroke-width="2"/>
+  <path d="M170 200 L210 180 L200 180 L170 200 Z" fill="url(#skin4)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Head -->
+  <circle cx="150" cy="140" r="28" fill="url(#skin4)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Hair (short spiky) -->
+  <path d="M130 110 L140 100 L150 105 L160 100 L170 110 L165 120 L155 125 L145 120 Z" fill="url(#hair4)" stroke="#000" stroke-width="1"/>
+  
+  <!-- Eyes (manga style - focused) -->
+  <ellipse cx="140" cy="135" rx="10" ry="8" fill="#000" stroke="#000" stroke-width="2"/>
+  <ellipse cx="160" cy="135" rx="10" ry="8" fill="#000" stroke="#000" stroke-width="2"/>
+  <circle cx="142" cy="132" r="4" fill="#fff"/>
+  <circle cx="162" cy="132" r="4" fill="#fff"/>
+  
+  <!-- Mouth (determined) -->
+  <path d="M145 150 Q150 155 155 150" fill="none" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Eyebrows -->
+  <path d="M135 125 L145 120" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  <path d="M155 120 L165 125" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Futsal Ball -->
+  <circle cx="220" cy="240" r="25" fill="#fff" stroke="#000" stroke-width="2"/>
+  <circle cx="220" cy="240" r="20" fill="url(#ballPattern)" stroke="#000" stroke-width="1"/>
+  
+  <!-- Jersey details -->
+  <path d="M140 190 L160 190" fill="none" stroke="#fff" stroke-width="3"/>
+  <path d="M140 210 L160 210" fill="none" stroke="#fff" stroke-width="3"/>
+  <path d="M140 230 L160 230" fill="none" stroke="#fff" stroke-width="3"/>
+  
+  <!-- Shoes -->
+  <ellipse cx="120" cy="350" rx="20" ry="8" fill="#333" stroke="#000" stroke-width="1"/>
+  <ellipse cx="160" cy="350" rx="20" ry="8" fill="#333" stroke="#000" stroke-width="1"/>
+  
+  <!-- Action lines (dribbling effect) -->
+  <path d="M200 220 L240 200" fill="none" stroke="#fff" stroke-width="3" opacity="0.8" stroke-linecap="round"/>
+  <path d="M210 230 L250 210" fill="none" stroke="#fff" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M220 240 L260 220" fill="none" stroke="#fff" stroke-width="1" opacity="0.4" stroke-linecap="round"/>
+  <path d="M200 260 L240 240" fill="none" stroke="#fff" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+</svg>

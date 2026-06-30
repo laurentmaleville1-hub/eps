@@ -217,6 +217,120 @@ header h1 {
 }
 
 /* ============================================
+
+/* ============================================
+   Sport Selector - Manga Style
+   ============================================ */
+
+.sport-selector {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--spacing-2xl);
+    border: 1px solid var(--gray-200);
+    text-align: center;
+}
+
+.sport-selector h2 {
+    color: var(--primary);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.sport-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.sport-option {
+    cursor: pointer;
+}
+
+.sport-option input {
+    display: none;
+}
+
+.sport-card {
+    background: var(--gray-50);
+    border: 3px solid var(--gray-200);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    text-align: center;
+    transition: all var(--transition);
+    cursor: pointer;
+}
+
+.sport-card:hover {
+    border-color: var(--primary);
+    background: var(--gray-100);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.sport-option input:checked + .sport-card {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, rgba(26, 35, 126, 0.1) 0%, rgba(26, 35, 126, 0.2) 100%);
+    box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.2);
+}
+
+.sport-card img {
+    width: 60px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: var(--spacing-sm);
+    transition: transform var(--transition);
+}
+
+.sport-option input:checked + .sport-card img {
+    transform: scale(1.1);
+}
+
+.sport-card span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    margin-top: var(--spacing-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sport-option input:checked + .sport-card span {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Sport Icons in Header */
+.sport-icons {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    display: flex;
+    gap: var(--spacing-xs);
+    opacity: 0.8;
+}
+
+.sport-icons img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: all var(--transition);
+}
+
+.sport-icons img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
    Scoreboard - Professional Design
    ============================================ */
 

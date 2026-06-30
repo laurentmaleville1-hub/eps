@@ -10,16 +10,75 @@
     <div class="container">
         <header>
             <div class="sport-icons">
-                <img src="images/basketball.svg" alt="Basketball" title="Basketball">
-                <img src="images/football.svg" alt="Football" title="Football">
-                <img src="images/volleyball.svg" alt="Volleyball" title="Volleyball">
-                <img src="images/handball.svg" alt="Handball" title="Handball">
+                <img src="images/sports/basketball.svg" alt="Basketball" title="Basketball">
+                <img src="images/sports/handball.svg" alt="Handball" title="Handball">
+                <img src="images/sports/ultimate.svg" alt="Ultimate" title="Ultimate">
+                <img src="images/sports/futsal.svg" alt="Futsal" title="Futsal">
+                <img src="images/sports/rugby.svg" alt="Rugby" title="Rugby">
+                <img src="images/sports/badminton.svg" alt="Badminton" title="Badminton">
+                <img src="images/sports/table_tennis.svg" alt="Tennis de table" title="Tennis de table">
             </div>
             <h1>Gestion de Score EPS</h1>
             <p class="subtitle">Sport Collectif - 2 Équipes</p>
         </header>
 
         <main>
+            <!-- Sélecteur d'activité sportive -->
+            <section class="sport-selector">
+                <h2>⚡ Sélectionnez votre activité</h2>
+                <div class="sport-options">
+                    <label class="sport-option" for="sport-basketball">
+                        <input type="radio" name="sport" id="sport-basketball" value="basketball" checked>
+                        <div class="sport-card">
+                            <img src="images/sports/basketball.svg" alt="Basketball">
+                            <span>Basketball</span>
+                        </div>
+                    </label>
+                    <label class="sport-option" for="sport-handball">
+                        <input type="radio" name="sport" id="sport-handball" value="handball">
+                        <div class="sport-card">
+                            <img src="images/sports/handball.svg" alt="Handball">
+                            <span>Handball</span>
+                        </div>
+                    </label>
+                    <label class="sport-option" for="sport-ultimate">
+                        <input type="radio" name="sport" id="sport-ultimate" value="ultimate">
+                        <div class="sport-card">
+                            <img src="images/sports/ultimate.svg" alt="Ultimate">
+                            <span>Ultimate</span>
+                        </div>
+                    </label>
+                    <label class="sport-option" for="sport-futsal">
+                        <input type="radio" name="sport" id="sport-futsal" value="futsal">
+                        <div class="sport-card">
+                            <img src="images/sports/futsal.svg" alt="Futsal">
+                            <span>Futsal</span>
+                        </div>
+                    </label>
+                    <label class="sport-option" for="sport-rugby">
+                        <input type="radio" name="sport" id="sport-rugby" value="rugby">
+                        <div class="sport-card">
+                            <img src="images/sports/rugby.svg" alt="Rugby">
+                            <span>Rugby</span>
+                        </div>
+                    </label>
+                    <label class="sport-option" for="sport-badminton">
+                        <input type="radio" name="sport" id="sport-badminton" value="badminton">
+                        <div class="sport-card">
+                            <img src="images/sports/badminton.svg" alt="Badminton">
+                            <span>Badminton</span>
+                        </div>
+                    </label>
+                    <label class="sport-option" for="sport-table-tennis">
+                        <input type="radio" name="sport" id="sport-table-tennis" value="table-tennis">
+                        <div class="sport-card">
+                            <img src="images/sports/table_tennis.svg" alt="Tennis de table">
+                            <span>Tennis de table</span>
+                        </div>
+                    </label>
+                </div>
+            </section>
+
             <!-- Configuration des équipes -->
             <section class="team-config">
                 <div class="team">
@@ -63,7 +122,7 @@
 
             <!-- Chronomètre -->
             <section class="timer-section">
-                <h3>Chronomètre</h3>
+                <h3>⏱️ Chronomètre</h3>
                 <div class="timer-display" id="timer">00:00:00</div>
                 <div class="timer-controls">
                     <button onclick="startTimer()" class="btn btn-start" id="startBtn">Démarrer</button>
@@ -74,7 +133,7 @@
 
             <!-- Gestion des données CSV -->
             <section class="data-section">
-                <h3>Gestion des Données</h3>
+                <h3>📊 Gestion des Données</h3>
                 <p class="data-info">Exportez et importez vos données au format CSV pour analyse dans un tableur.</p>
                 <div class="data-controls">
                     <button onclick="exportToCSV()" class="btn btn-export">📥 Exporter CSV</button>
@@ -106,7 +165,7 @@
 
             <!-- Historique -->
             <section class="history">
-                <h3>Historique des actions</h3>
+                <h3>📜 Historique des actions</h3>
                 <ul id="history-list"></ul>
                 <button onclick="clearHistory()" class="btn btn-clear">Effacer l'historique</button>
             </section>
