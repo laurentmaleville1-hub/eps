@@ -230,6 +230,43 @@ header h1 {
     color: var(--text-light);
 }
 
+.btn-export {
+    background-color: #16a085;
+    color: var(--text-light);
+}
+
+.btn-export:hover {
+    background-color: #1abc9c;
+}
+
+.btn-import {
+    background-color: #8e44ad;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.btn-import:hover {
+    background-color: #9b59b6;
+}
+
+.btn-save {
+    background-color: #34495e;
+    color: var(--text-light);
+}
+
+.btn-save:hover {
+    background-color: #2c3e50;
+}
+
+.btn-clear-data {
+    background-color: #e74c3c;
+    color: var(--text-light);
+}
+
+.btn-clear-data:hover {
+    background-color: #c0392b;
+}
+
 /* Actions */
 .actions {
     display: flex;
@@ -266,6 +303,75 @@ header h1 {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+}
+
+/* Data Section */
+.data-section {
+    background-color: var(--text-light);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+.data-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.data-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.data-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.data-preview {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.data-preview h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+#data-table th,
+#data-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#data-table th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+#data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#data-table tr:hover {
+    background-color: #f0f0f0;
 }
 
 /* History */
@@ -346,6 +452,16 @@ footer {
     .timer-display {
         font-size: 2rem;
     }
+    
+    .data-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .data-controls .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -375,6 +491,15 @@ footer {
         width: 100%;
         margin-bottom: 10px;
     }
+    
+    #data-table {
+        font-size: 0.8rem;
+    }
+    
+    #data-table th,
+    #data-table td {
+        padding: 8px;
+    }
 }
 
 /* Animations */
@@ -394,5 +519,9 @@ footer {
 }
 
 #history-list li {
+    animation: fadeIn 0.3s ease;
+}
+
+#data-table tbody tr {
     animation: fadeIn 0.3s ease;
 }
