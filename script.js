@@ -5,9 +5,55 @@ let timerInterval = null;
 let timerSeconds = 0;
 let isTimerRunning = false;
 let matchData = []; // Tableau pour stocker les données du match
+let currentSport = "basketball";
+
+// Configuration des sports
+const sportConfig = {
+    basketball: {
+        name: "Basketball",
+        primaryColor: "#1a237e",
+        secondaryColor: "#ff5722",
+        backgroundImage: "linear-gradient(135deg, #1a237e 0%, #303f9f 100%)"
+    },
+    handball: {
+        name: "Handball",
+        primaryColor: "#00695c",
+        secondaryColor: "#4caf50",
+        backgroundImage: "linear-gradient(135deg, #00695c 0%, #004d40 100%)"
+    },
+    ultimate: {
+        name: "Ultimate",
+        primaryColor: "#9c27b0",
+        secondaryColor: "#e91e63",
+        backgroundImage: "linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%)"
+    },
+    futsal: {
+        name: "Futsal",
+        primaryColor: "#ff9800",
+        secondaryColor: "#f57c00",
+        backgroundImage: "linear-gradient(135deg, #ff9800 0%, #f57c00 100%)"
+    },
+    rugby: {
+        name: "Rugby",
+        primaryColor: "#1565c0",
+        secondaryColor: "#0d47a1",
+        backgroundImage: "linear-gradient(135deg, #1565c0 0%, #0d47a1 100%)"
+    },
+    badminton: {
+        name: "Badminton",
+        primaryColor: "#e91e63",
+        secondaryColor: "#c2185b",
+        backgroundImage: "linear-gradient(135deg, #e91e63 0%, #c2185b 100%)"
+    },
+    "table-tennis": {
+        name: "Tennis de table",
+        primaryColor: "#2196f3",
+        secondaryColor: "#1976d2",
+        backgroundImage: "linear-gradient(135deg, #2196f3 0%, #1976d2 100%)"
+    }
+};
 
 // DOM Elements
-const sportRadios = document.querySelectorAll("input[name="sport"]");
 const score1Display = document.getElementById('score1');
 const score2Display = document.getElementById('score2');
 const team1NameDisplay = document.getElementById('team1-name');
@@ -19,6 +65,7 @@ const startBtn = document.getElementById('startBtn');
 const pauseBtn = document.getElementById('pauseBtn');
 const historyList = document.getElementById('history-list');
 const dataTableBody = document.getElementById('data-table-body');
+const sportRadios = document.querySelectorAll('input[name="sport"]');
 
 // Initialisation
 function init() {
@@ -35,18 +82,72 @@ function init() {
     
     // Charger les données existantes
     loadMatchData();
+    
     // Charger le sport sélectionné
-\    loadSelectedSport();
-\    // Écouteurs pour le changement de sport
-\    sportRadios.forEach(radio => {
-\        radio.addEventListener("change", changeSport);
-\    });
+    loadSelectedSport();
+    
+    // Écouteurs pour le changement de sport
+    sportRadios.forEach(radio => {
+        radio.addEventListener('change', changeSport);
+    });
     
     // Ajouter un enregistrement initial
     addMatchRecord('Initialisation');
     
     // Mettre à jour l'affichage du tableau
     updateDataTable();
+}
+
+// Gestion du sport
+function changeSport(event) {
+    currentSport = event.target.value;
+    localStorage.setItem('eps_selected_sport', currentSport);
+    applySportTheme();
+    addToHistory(`Sport changé: ${sportConfig[currentSport].name}`);
+}
+
+function loadSelectedSport() {
+    const savedSport = localStorage.getItem('eps_selected_sport');
+    if (savedSport && sportConfig[savedSport]) {
+        currentSport = savedSport;
+        const radio = document.getElementById(`sport-${savedSport}`);
+        if (radio) {
+            radio.checked = true;
+        }
+    }
+    applySportTheme();
+}
+
+function applySportTheme() {
+    const config = sportConfig[currentSport];
+    if (config) {
+        document.documentElement.style.setProperty('--primary', config.primaryColor);
+        document.documentElement.style.setProperty('--primary-light', lightenColor(config.primaryColor, 20));
+        document.documentElement.style.setProperty('--secondary', config.secondaryColor);
+        document.documentElement.style.setProperty('--accent', config.secondaryColor);
+        
+        // Changer le fond du header
+        const header = document.querySelector('header');
+        if (header) {
+            header.style.background = config.backgroundImage;
+            header.style.backgroundColor = config.primaryColor;
+        }
+    }
+}
+
+function lightenColor(hex, percent) {
+    // Convert hex to RGB
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    
+    // Lighten
+    const newR = Math.min(255, r + (255 - r) * percent / 100);
+    const newG = Math.min(255, g + (255 - g) * percent / 100);
+    const newB = Math.min(255, b + (255 - b) * percent / 100);
+    
+    // Convert back to hex
+    return `#${Math.round(newR).toString(16).padStart(2, '0')}${Math.round(newG).toString(16).padStart(2, '0')}${Math.round(newB).toString(16).padStart(2, '0')}`;
 }
 
 // Mise à jour des noms d'équipes
@@ -100,7 +201,7 @@ function animateScoreDisplay(team) {
     display.style.color = '#e74c3c';
     setTimeout(() => {
         display.style.transform = 'scale(1)';
-        display.style.color = '#3498db';
+        display.style.color = '';
     }, 300);
 }
 
@@ -117,8 +218,8 @@ function updateScoreDisplay() {
         score1Display.style.color = '#e74c3c';
         score2Display.style.color = '#27ae60';
     } else {
-        score1Display.style.color = '#3498db';
-        score2Display.style.color = '#3498db';
+        score1Display.style.color = '';
+        score2Display.style.color = '';
     }
 }
 
@@ -469,99 +570,4 @@ function handleKeyboardShortcuts(event) {
 }
 
 // Initialisation au chargement de la page
-
-// Gestion du sport
-let currentSport = "basketball";
-
-const sportConfig = {
-    basketball: {
-        name: "Basketball",
-        primaryColor: "#1a237e",
-        secondaryColor: "#ff5722",
-        backgroundImage: "linear-gradient(135deg, #1a237e 0%, #303f9f 100%)"
-    },
-    handball: {
-        name: "Handball",
-        primaryColor: "#00695c",
-        secondaryColor: "#4caf50",
-        backgroundImage: "linear-gradient(135deg, #00695c 0%, #004d40 100%)"
-    },
-    ultimate: {
-        name: "Ultimate",
-        primaryColor: "#9c27b0",
-        secondaryColor: "#e91e63",
-        backgroundImage: "linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%)"
-    },
-    futsal: {
-        name: "Futsal",
-        primaryColor: "#ff9800",
-        secondaryColor: "#f57c00",
-        backgroundImage: "linear-gradient(135deg, #ff9800 0%, #f57c00 100%)"
-    },
-    rugby: {
-        name: "Rugby",
-        primaryColor: "#1565c0",
-        secondaryColor: "#0d47a1",
-        backgroundImage: "linear-gradient(135deg, #1565c0 0%, #0d47a1 100%)"
-    },
-    badminton: {
-        name: "Badminton",
-        primaryColor: "#e91e63",
-        secondaryColor: "#c2185b",
-        backgroundImage: "linear-gradient(135deg, #e91e63 0%, #c2185b 100%)"
-    },
-    table-tennis: {
-        name: "Tennis de table",
-        primaryColor: "#2196f3",
-        secondaryColor: "#1976d2",
-        backgroundImage: "linear-gradient(135deg, #2196f3 0%, #1976d2 100%)"
-    }
-};
-
-function changeSport(event) {
-    currentSport = event.target.value;
-    localStorage.setItem("eps_selected_sport", currentSport);
-    applySportTheme();
-    addToHistory(`Sport changé: ${sportConfig[currentSport].name}`);
-}
-
-function loadSelectedSport() {
-    const savedSport = localStorage.getItem("eps_selected_sport");
-    if (savedSport && sportConfig[savedSport]) {
-        currentSport = savedSport;
-        document.getElementById(`sport-${savedSport}`).checked = true;
-    }
-    applySportTheme();
-}
-
-function applySportTheme() {
-    const config = sportConfig[currentSport];
-    document.documentElement.style.setProperty("--primary", config.primaryColor);
-    document.documentElement.style.setProperty("--primary-light", lightenColor(config.primaryColor, 20));
-    document.documentElement.style.setProperty("--secondary", config.secondaryColor);
-    document.documentElement.style.setProperty("--accent", config.secondaryColor);
-    
-    // Changer le fond du header
-    const header = document.querySelector("header");
-    if (header) {
-        header.style.background = config.backgroundImage;
-        header.style.backgroundColor = config.primaryColor;
-    }
-}
-
-function lightenColor(hex, percent) {
-    // Convert hex to RGB
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
-    
-    // Lighten
-    const newR = Math.min(255, r + (255 - r) * percent / 100);
-    const newG = Math.min(255, g + (255 - g) * percent / 100);
-    const newB = Math.min(255, b + (255 - b) * percent / 100);
-    
-    // Convert back to hex
-    return `#${Math.round(newR).toString(16).padStart(2, 0)}${Math.round(newG).toString(16).padStart(2, 0)}${Math.round(newB).toString(16).padStart(2, 0)}`;
-}
-
 document.addEventListener('DOMContentLoaded', init);
