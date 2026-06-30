@@ -1,0 +1,6 @@
+# Dépendances du projet EPS
+# Ajoutez ici les dépendances nécessaires pour votre projet.
+
+# Exemple :
+# pytest>=7.0.0
+# requests>=2.28.0
