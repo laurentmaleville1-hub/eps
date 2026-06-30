@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- Manga style handball player -->
+  <defs>
+    <linearGradient id="skin2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdab9"/>
+      <stop offset="100%" style="stop-color:#f4a460"/>
+    </linearGradient>
+    <linearGradient id="hair2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a4a4a"/>
+      <stop offset="100%" style="stop-color:#2a2a2a"/>
+    </linearGradient>
+    <linearGradient id="jersey2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4caf50"/>
+      <stop offset="100%" style="stop-color:#388e3c"/>
+    </linearGradient>
+    <linearGradient id="shadow2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0.2)"/>
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4)"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="150" cy="380" rx="80" ry="20" fill="url(#shadow2)" opacity="0.5"/>
+  
+  <!-- Dynamic pose -->
+  <!-- Legs -->
+  <path d="M100 260 L90 350 L110 350 Z" fill="url(#jersey2)" stroke="#000" stroke-width="2"/>
+  <path d="M180 240 L170 350 L190 350 Z" fill="url(#jersey2)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Body -->
+  <path d="M110 160 L170 180 L190 240 L110 260 Z" fill="url(#jersey2)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Arms -->
+  <path d="M110 160 L70 180 L80 180 L110 160 Z" fill="url(#skin2)" stroke="#000" stroke-width="2"/>
+  <path d="M170 180 L210 160 L200 160 L170 180 Z" fill="url(#skin2)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Head -->
+  <circle cx="140" cy="120" r="28" fill="url(#skin2)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Hair (spiky manga style) -->
+  <path d="M120 100 L130 90 L140 95 L150 85 L160 95 L170 90 L180 100 L175 110 L165 115 L155 115 L145 110 Z" fill="url(#hair2)" stroke="#000" stroke-width="1"/>
+  
+  <!-- Eyes (manga style - determined) -->
+  <ellipse cx="132" cy="125" rx="10" ry="8" fill="#000" stroke="#000" stroke-width="2"/>
+  <ellipse cx="152" cy="125" rx="10" ry="8" fill="#000" stroke="#000" stroke-width="2"/>
+  <circle cx="134" cy="122" r="4" fill="#fff"/>
+  <circle cx="154" cy="122" r="4" fill="#fff"/>
+  
+  <!-- Mouth (determined) -->
+  <path d="M135 135 L155 135" fill="none" stroke="#000" stroke-width="2"/>
+  
+  <!-- Eyebrows -->
+  <path d="M125 115 L135 120" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  <path d="M145 120 L155 115" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Handball -->
+  <circle cx="220" cy="180" r="20" fill="#fff" stroke="#000" stroke-width="2"/>
+  <path d="M210 170 Q220 160 230 170 Q220 180 210 170" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M210 190 Q220 200 230 190 Q220 180 210 190" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M200 180 L240 180" fill="none" stroke="#000" stroke-width="1"/>
+  
+  <!-- Jersey details -->
+  <path d="M120 170 L140 170" fill="none" stroke="#fff" stroke-width="2"/>
+  <path d="M120 190 L140 190" fill="none" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Shoes -->
+  <ellipse cx="100" cy="350" rx="20" ry="8" fill="#333" stroke="#000" stroke-width="1"/>
+  <ellipse cx="180" cy="350" rx="20" ry="8" fill="#333" stroke="#000" stroke-width="1"/>
+  
+  <!-- Action lines -->
+  <path d="M200 160 L240 140" fill="none" stroke="#fff" stroke-width="4" opacity="0.8" stroke-linecap="round"/>
+  <path d="M210 170 L250 150" fill="none" stroke="#fff" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+  <path d="M220 180 L260 160" fill="none" stroke="#fff" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+</svg>

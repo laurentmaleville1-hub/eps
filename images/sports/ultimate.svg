@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- Manga style ultimate frisbee player -->
+  <defs>
+    <linearGradient id="skin3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdab9"/>
+      <stop offset="100%" style="stop-color:#f4a460"/>
+    </linearGradient>
+    <linearGradient id="hair3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b4513"/>
+      <stop offset="100%" style="stop-color:#654321"/>
+    </linearGradient>
+    <linearGradient id="jersey3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9c27b0"/>
+      <stop offset="100%" style="stop-color:#7b1fa2"/>
+    </linearGradient>
+    <linearGradient id="shadow3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0.2)"/>
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4)"/>
+    </linearGradient>
+    <radialGradient id="frisbee" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#fff"/>
+      <stop offset="100%" style="stop-color:#e0e0e0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="150" cy="380" rx="80" ry="20" fill="url(#shadow3)" opacity="0.5"/>
+  
+  <!-- Running pose -->
+  <!-- Legs -->
+  <path d="M100 280 L90 350 L110 350 Z" fill="url(#jersey3)" stroke="#000" stroke-width="2"/>
+  <path d="M180 260 L170 350 L190 350 Z" fill="url(#jersey3)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Body -->
+  <path d="M110 180 L170 200 L190 260 L110 280 Z" fill="url(#jersey3)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Arms -->
+  <path d="M110 180 L70 200 L80 200 L110 180 Z" fill="url(#skin3)" stroke="#000" stroke-width="2"/>
+  <path d="M170 200 L210 180 L200 180 L170 200 Z" fill="url(#skin3)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Head -->
+  <circle cx="140" cy="140" r="28" fill="url(#skin3)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Hair (long manga style) -->
+  <path d="M120 100 L130 90 L140 95 L150 85 L160 95 L170 90 L180 100 L175 110 L165 115 L155 120 L145 115 L135 110 Z" fill="url(#hair3)" stroke="#000" stroke-width="1"/>
+  <path d="M130 90 L150 70 L170 90" fill="url(#hair3)" stroke="#000" stroke-width="1"/>
+  
+  <!-- Eyes (manga style - focused) -->
+  <ellipse cx="132" cy="135" rx="10" ry="8" fill="#000" stroke="#000" stroke-width="2"/>
+  <ellipse cx="152" cy="135" rx="10" ry="8" fill="#000" stroke="#000" stroke-width="2"/>
+  <circle cx="134" cy="132" r="4" fill="#fff"/>
+  <circle cx="154" cy="132" r="4" fill="#fff"/>
+  
+  <!-- Mouth (breathing) -->
+  <ellipse cx="140" cy="150" rx="8" ry="4" fill="none" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Eyebrows -->
+  <path d="M125 125 L135 120" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  <path d="M145 120 L155 125" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Ultimate Frisbee -->
+  <ellipse cx="220" cy="160" rx="35" ry="12" fill="url(#frisbee)" stroke="#000" stroke-width="2"/>
+  <circle cx="220" cy="160" r="25" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M200 160 L240 160" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M220 140 L220 180" fill="none" stroke="#000" stroke-width="1"/>
+  
+  <!-- Jersey details -->
+  <path d="M120 190 L140 190" fill="none" stroke="#fff" stroke-width="2"/>
+  <path d="M120 210 L140 210" fill="none" stroke="#fff" stroke-width="2"/>
+  <path d="M120 230 L140 230" fill="none" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Shoes -->
+  <ellipse cx="100" cy="350" rx="20" ry="8" fill="#fff" stroke="#000" stroke-width="1"/>
+  <ellipse cx="180" cy="350" rx="20" ry="8" fill="#fff" stroke="#000" stroke-width="1"/>
+  
+  <!-- Action lines (speed effect) -->
+  <path d="M80 200 L120 180" fill="none" stroke="#fff" stroke-width="3" opacity="0.8" stroke-linecap="round"/>
+  <path d="M90 210 L130 190" fill="none" stroke="#fff" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path d="M100 220 L140 200" fill="none" stroke="#fff" stroke-width="1" opacity="0.4" stroke-linecap="round"/>
+</svg>

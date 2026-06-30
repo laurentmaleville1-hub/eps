@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- Manga style rugby player -->
+  <defs>
+    <linearGradient id="skin5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdab9"/>
+      <stop offset="100%" style="stop-color:#f4a460"/>
+    </linearGradient>
+    <linearGradient id="hair5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b4513"/>
+      <stop offset="100%" style="stop-color:#654321"/>
+    </linearGradient>
+    <linearGradient id="jersey5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565c0"/>
+      <stop offset="100%" style="stop-color:#0d47a1"/>
+    </linearGradient>
+    <linearGradient id="shadow5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0.2)"/>
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4)"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="150" cy="380" rx="80" ry="20" fill="url(#shadow5)" opacity="0.5"/>
+  
+  <!-- Running with ball pose -->
+  <!-- Legs -->
+  <path d="M100 280 L90 350 L110 350 Z" fill="url(#jersey5)" stroke="#000" stroke-width="2"/>
+  <path d="M180 260 L170 350 L190 350 Z" fill="url(#jersey5)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Body (muscular) -->
+  <path d="M110 160 L170 180 L190 260 L110 280 Z" fill="url(#jersey5)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Arms (holding ball) -->
+  <path d="M110 160 L70 180 L80 180 L110 160 Z" fill="url(#skin5)" stroke="#000" stroke-width="2"/>
+  <path d="M170 180 L210 160 L200 160 L170 180 Z" fill="url(#skin5)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Head -->
+  <circle cx="140" cy="120" r="28" fill="url(#skin5)" stroke="#000" stroke-width="2"/>
+  
+  <!-- Hair (short) -->
+  <path d="M120 100 L130 90 L140 95 L150 90 L160 95 L170 90 L180 100 L175 110 L165 115 L155 115 L145 110 Z" fill="url(#hair5)" stroke="#000" stroke-width="1"/>
+  
+  <!-- Eyes (manga style - intense) -->
+  <ellipse cx="132" cy="125" rx="10" ry="6" fill="#000" stroke="#000" stroke-width="2"/>
+  <ellipse cx="152" cy="125" rx="10" ry="6" fill="#000" stroke="#000" stroke-width="2"/>
+  <circle cx="134" cy="122" r="3" fill="#fff"/>
+  <circle cx="154" cy="122" r="3" fill="#fff"/>
+  
+  <!-- Mouth (gritted teeth) -->
+  <path d="M135 135 L155 135" fill="none" stroke="#000" stroke-width="2"/>
+  <path d="M140 135 L145 140" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M150 135 L155 140" fill="none" stroke="#000" stroke-width="1"/>
+  
+  <!-- Eyebrows (angry) -->
+  <path d="M125 115 L135 120" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+  <path d="M145 120 L155 115" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Rugby Ball -->
+  <ellipse cx="220" cy="200" rx="30" ry="15" fill="#fff" stroke="#000" stroke-width="2"/>
+  <path d="M200 190 Q220 180 240 190 Q220 200 200 190" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M200 210 Q220 220 240 210 Q220 200 200 210" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M205 195 L235 195" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M205 205 L235 205" fill="none" stroke="#000" stroke-width="1"/>
+  
+  <!-- Jersey details (rugby stripes) -->
+  <path d="M120 170 L140 170" fill="none" stroke="#fff" stroke-width="4"/>
+  <path d="M120 190 L140 190" fill="none" stroke="#fff" stroke-width="4"/>
+  <path d="M120 210 L140 210" fill="none" stroke="#fff" stroke-width="4"/>
+  <path d="M120 230 L140 230" fill="none" stroke="#fff" stroke-width="4"/>
+  
+  <!-- Shorts -->
+  <path d="M110 260 L170 260 L170 280 L110 280 Z" fill="#fff" stroke="#000" stroke-width="2"/>
+  <path d="M110 260 L110 280" fill="none" stroke="#000" stroke-width="1"/>
+  <path d="M170 260 L170 280" fill="none" stroke="#000" stroke-width="1"/>
+  
+  <!-- Shoes -->
+  <ellipse cx="100" cy="350" rx="20" ry="8" fill="#333" stroke="#000" stroke-width="1"/>
+  <ellipse cx="180" cy="350" rx="20" ry="8" fill="#333" stroke="#000" stroke-width="1"/>
+  
+  <!-- Action lines (power effect) -->
+  <path d="M80 200 L120 180" fill="none" stroke="#fff" stroke-width="4" opacity="0.8" stroke-linecap="round"/>
+  <path d="M90 210 L130 190" fill="none" stroke="#fff" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+  <path d="M100 220 L140 200" fill="none" stroke="#fff" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+</svg>
